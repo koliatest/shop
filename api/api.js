@@ -69,7 +69,7 @@ passport.use(new FacebookStrategy({
     clientID: '1851793888384017',
     clientSecret: '164d473fa600dccc74a0fbb1498ddea5',
     profileFields: ['id', 'displayName', 'email'],
-    callbackURL: 'http://localhost:3000/api/login/facebook/return'
+    callbackURL: 'http://trueshop.herokuapp.com//api/login/facebook/return'
   },
   function(accessToken, refreshToken, profile, done) {
     User.findOne({ facebookId: profile.id }, function(err, user) {
